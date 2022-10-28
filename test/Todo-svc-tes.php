@@ -11,6 +11,7 @@ require_once __DIR__ . "/../entity/Todo.php";
 
 function tesShowTodo(){
     $todoRepo = new TodoRepoImpl();
+
     $todoSvc = new TodoSvcImpl($todoRepo);
 
     $todoSvc->showTodo();

@@ -26,6 +26,7 @@ namespace Service{
             $todo = $this->todoRepo->getAll();
 
             foreach($todo as $key => $val){
+                $key += 1;
                 echo "$key. $val \n";
             }
         }
