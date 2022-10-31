@@ -30,6 +30,20 @@ function tesAddTodo(){
 
     $todoSvc->showTodo();
 }
+function tesRmvTodo(){
+    $todoRepo = new TodoRepoImpl();
+
+    $todoSvc = new TodoSvcImpl($todoRepo);
+    $todoSvc->addTodo("Angular");
+    $todoSvc->addTodo("Angular");
+    $todoSvc->addTodo("Angular");
+
+    $todoSvc->showTodo();
+
+    $todoSvc->rmvTodo(1);
+    $todoSvc->showTodo();
+}
 
 // tesShowTodo();
-tesAddTodo();
+// tesAddTodo();
+tesRmvTodo();
