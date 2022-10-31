@@ -2,6 +2,7 @@
 
 namespace Service{
 
+    use Entity\Todo;
     use Repo\TodoRepo;
 
     interface TodoService{
@@ -32,7 +33,9 @@ namespace Service{
         }
 
         function addTodo($todo){
-
+            $todolist = new Todo($todo);
+            $this->todoRepo->save($todolist);
+            echo "Sukses manambahkan todolist \n";
         }
 
         function rmvTodo($num){
