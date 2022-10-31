@@ -35,8 +35,8 @@ function tesRmvTodo(){
 
     $todoSvc = new TodoSvcImpl($todoRepo);
     $todoSvc->addTodo("Angular");
-    $todoSvc->addTodo("Angular");
-    $todoSvc->addTodo("Angular");
+    $todoSvc->addTodo("React");
+    $todoSvc->addTodo("Js");
 
     $todoSvc->showTodo();
 
