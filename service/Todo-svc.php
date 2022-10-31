@@ -39,7 +39,11 @@ namespace Service{
         }
 
         function rmvTodo($num){
-
+            if($this->todoRepo->remove($num)){
+                echo "Berhasil menghapus list! \n";
+            }else{
+                echo "Gagal menghapus list! \n";
+            }
         }
     }
 
