@@ -28,7 +28,7 @@ namespace Service{
 
             foreach($todo as $key => $val){
                 $key += 1;
-                echo "$key. $val \n";
+                echo "$key. " . $val->getTodo() . "\n";
             }
         }
 
