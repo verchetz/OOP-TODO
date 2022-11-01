@@ -40,7 +40,7 @@ function tesRmvTodo(){
 
     $todoSvc->showTodo();
 
-    $todoSvc->rmvTodo(1);
+    $todoSvc->rmvTodo(2);
     $todoSvc->showTodo();
 }
 
