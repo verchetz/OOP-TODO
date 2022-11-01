@@ -38,9 +38,6 @@ namespace Repo{
         }
     }
 
-    echo "DUMB";
-    echo "DUMB";
-    echo "DUMB";
 }
 
 
