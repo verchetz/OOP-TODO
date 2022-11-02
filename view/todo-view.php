@@ -54,7 +54,15 @@ namespace View{
 
         public function rmvTodo()
         {
-            # code...
+            echo "Menghapus Todo \n";
+
+            $pilihan = Input::input("nomor (x untuk batal)");
+        
+            if($pilihan == "x"){
+                echo "BATAL DIAPUS! \n";
+            }else{
+                $succsess = $this->todoService->rmvTodo($pilihan);
+            }
         }
     }
 
