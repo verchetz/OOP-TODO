@@ -36,4 +36,19 @@ function tesAddTodo(){
 
     $todoSvc->showTodo();
 }
-tesViewShow();
+function tesRmvTodo(){
+    $todoRepo = new TodoRepoImpl();
+    $todoSvc = new TodoSvcImpl($todoRepo);
+    $todoView = new TodoView($todoSvc);
+
+    $todoSvc->addTodo('Bermain');
+    $todoSvc->addTodo('Belajar');
+    $todoSvc->addTodo('Berputar');
+
+    $todoSvc->showTodo();
+
+    $todoView->rmvTodo();
+
+    $todoSvc->showTodo();
+}
+TesRmvTodo();
