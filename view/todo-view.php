@@ -42,7 +42,14 @@ namespace View{
 
         public function addTodo()
         {
-            # code...
+            echo "Menambah to do \n";
+            $todo = Input::input("Todo (x batal) ");
+        
+            if($todo == "x"){
+                echo "batal menambah todo \n";
+            }else{
+                $this->todoService->addTodo($todo);
+            }
         }
 
         public function rmvTodo()
